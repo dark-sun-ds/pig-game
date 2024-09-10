@@ -1,0 +1,145 @@
+:root {
+  --box-shadow-color: rgba(0, 0, 0, 0.25);
+  --light-bg-color: #ffe5f4;
+  --pink-color: #c02e58;
+}
+* {
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #b7292f, #5e2964);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-field {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px var(--box-shadow-color);
+  display: flex;
+}
+.player {
+  width: 50%;
+  background-color: #d3a5b5;
+  display: flex;
+}
+
+.inactive {
+  opacity: 0.6;
+}
+
+.player:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.player:nth-child(2) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.player-container {
+  margin: auto;
+  max-width: 250px;
+  width: 100%;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+.player-container h2 {
+  margin: 0;
+  color: #342d30;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.player-score {
+  margin: 20px 0 170px;
+  font-size: 80px;
+  color: var(--pink-color);
+  text-align: center;
+}
+
+.current-score-container {
+  width: 100%;
+  background-color: var(--pink-color);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.current-score-container p {
+  margin-top: 5px;
+  font-size: 18px;
+  color: var(--light-bg-color);
+}
+
+.current-score {
+  color: var(--light-bg-color);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.buttons {
+  position: absolute;
+  width: 300px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  height: 44px;
+  width: 150px;
+  border-radius: 22px;
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.651);
+  margin: auto;
+  cursor: pointer;
+}
+
+#new-game {
+  margin-top: 50px;
+}
+
+#roll-dice {
+    margin-bottom: 30px;
+}
+
+#hold {
+    width: 110px;
+}
+
+.dice {
+  margin: 95px auto 150px;
+  width: 120px;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 40px var(--box-shadow-color);
+}
+
+.dice img {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
